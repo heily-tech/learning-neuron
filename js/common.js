@@ -8,7 +8,7 @@
 
 	function scrollShowHide(status) {
 		$html.css({"overflow-y":status});
-		return $html.width();    
+		return $html.width();
 	}
 
 	var sc_w1 = scrollShowHide("hidden"),
@@ -24,16 +24,16 @@
 
 	$(win).on("resize", function() {
 		var w_size = $(win).width();
-		if(w_size >= deviceSize.pc 
+		if(w_size >= deviceSize.pc
 		&& !$("html").hasClass("pc")) {
 			$html.removeClass("mobile tablet").addClass("pc");
 			scrollShowHide("scroll");
-		} else if(w_size < deviceSize.pc 
-		&& w_size >= deviceSize.tablet 
+		} else if(w_size < deviceSize.pc
+		&& w_size >= deviceSize.tablet
 		&& !$("html").hasClass("tablet")) {
 			$html.removeClass("mobile pc").addClass("tablet");
 			scrollShowHide("scroll");
-		} else if(w_size <= deviceSize.mobile 
+		} else if(w_size <= deviceSize.mobile
 		&& !$html.hasClass("mobile")) {
 			$html.removeClass("pc tablet").addClass("mobile");
 			var menu_pos = parseInt($(".mobile-menu-wrap").css("left"));
@@ -47,13 +47,20 @@
 					$(win).trigger("resize");
 
 					$(document).on("mouseover focus",
-					".pc #gnb>ul>li>a, .tablet #gnb>ul>li>a", 
+					".pc #gnb>ul>li>a, .tablet #gnb>ul>li>a",
 					gnbPlay);
 
 					$(document).on("click",
-					".mobile #gnb>ul>li:not(.no-sub)>a", 
+					".mobile #gnb>ul>li:not(.no-sub)>a",
 					gnbPlay);
-					
+
+					$(document).on("click",
+					".mobile #gnb>ul>li>a", function() {
+						$(".mobile-menu-wrap").animate({"left":"-1000px"}, 200);
+						scrollShowHide("scroll");
+						gnbleave();
+					}
+				)
 					function gnbPlay() {
 						var $ts = $(this);
 						if($("html").hasClass("mobile")) {
@@ -67,7 +74,7 @@
 								$("#gnb ul ul:visible").slideUp(300);
 								$ts.next().stop(true,true).slideDown(300);
 						}
-					} 
+					}
 
 					$(document).on("mouseleave",
 					".pc #gnb, .tablet #gnb", gnbleave);
