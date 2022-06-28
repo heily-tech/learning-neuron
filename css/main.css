@@ -1,45 +1,18 @@
 .container {
-  text-align: center;  margin: 0 100px 30px 100px;  padding: 10px;  background: ;}
-#main_btn {  margin-top: 10px;  }
-.main_btn {  margin: 10px;  background: #fce205;  border: 1.5px solid black;  border-radius: 20px;
-  padding: 13px 25px;  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);  font-family: 'NanumJangMiCe';  font-size: 30px; }
-
-.modal-bg {
-  display: none;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 999;
+  text-align: center;  margin: 0 50px 30px 50px;  padding: 10px;}
+.decoration {
+   margin: auto;  padding: 10px; width: 300px; background: #FDE7BC; border-radius: 20px;
 }
-.modal-wrap {
-  display: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transition: translate(-50%, -50%);
-  width: 300px;
-  height: 300px;
-  padding: 10px;
-  background: #fff;
-  z-index: 1000;
+#main_btn {  margin-top: 10px;}
+#main_btn input {
+  font-size: 35px;
+  text-align: center;
+  width: 150px;
+  height: 43px;
+  font-family: 'NanumJangMiCe';
+  border-radius: 20px;
+  border: 1.5px solid black;
 }
-.modal-title {
-   font-family: 'NanumJangMiCe';
-   color: black;
-   font-size: 30px;
-
-}
-.modal-close {  float: right; }
-form input {
-  width: 80%;
-  padding: 10px 10px;
-  font-size: 15px;
-}
-input::placeholder {
-  font-family: "NanumJangmiCe";
-  font-size: 18px;
-}
+.main_btn {  margin: 10px;  background: #fce205;  width: 150px; 
+  border: 1.5px solid black;  border-radius: 20px;
+  padding: 5px 20px;  font-family: 'NanumJangMiCe';  font-size: 32px; }
