@@ -3,7 +3,7 @@
 *, *:before, *:after{  box-sizing: border-box;  }
 body{
     background: #fffcf6 url(../images/common/bg-top.png) 0 0 repeat-x;
-    font: 14px "맑은고딕";    color: #555;    min-width:320px }
+    font: 14px "맑은고딕";    color: #555;    min-width:320px;}
 /*header site*/
 .util-menu {
   position: absolute;  right: 10px;  top: 0;  font-size: 12px; }
@@ -20,7 +20,13 @@ body{
 .header-inner {
   position: relative;  height: 172px;  max-width: 1008px;  margin: 0 auto;  }
 
-#container, #footer{
+#container {
+  padding: 50px;
+  background: #FDE7BC;
+  border-radius: 10px;
+  height: 100%;
+}
+#container, #footer {
   max-width: 1008px;
   margin: 0 auto;
 }
@@ -102,7 +108,7 @@ Mobile:767px;
 */
 @media (max-width:1008px) {
     #container{
-        padding: 0 10px;
+        padding: 30px 30px;
     }
     .site-choice{
         left: 10px;
