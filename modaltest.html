@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Modal</title>
+    <style>
+      * {      font-family: "Leferi";    }
+      .modal {        position: absolute;        top: 0;        left: 0;
+        width: 100%;        height: 100%;        display: none;
+        background-color: rgba(0, 0, 0, 0.4);      }
+      .modal_content {       position: absolute;       top: 50%;       left: 50%;
+       width: 300px;       height: 200px;       padding: 20px;
+       text-align: center;       background-color: rgb(255, 255, 255);
+       border-radius: 10px;       box-shadow: 10px 8px 12px 0 rgba(34, 36, 38, 0.15);
+       transform: translateX(-50%) translateY(-50%);   border: 2px solid yellow; }
+      .modal_content span { font-size: 25px;}
+      .modal_close { float: right; font-size: 30px}
+      input {  font-size: 15px;       }
+      #room_code {
+        font-size: 35px;
+        margin-bottom: 10px;
+        padding: 5px;
+        text-decoration: underline;
+        text-decoration-color: lightgrey;
+        text-underline-position:
+
+      }
+    </style>
+  </head>
+  <body>
+    <button class="modal_open_enter">참여하기</button>
+    <button class="modal_open_create">생성하기</button>
+    <div class="modal">
+      <div class="modal_content">
+
+          <div class="modal_enter">
+            <span>수업 참여하기</span><span class="modal_close">&times;</span>
+            <hr>
+<!--name / value 조정 필요 -->
+            <input type="text" name="room_code" placeholder="수업 코드를 입력하세요."></input>
+            <button type="button" name="enterBtn">참여하기</button>
+            <p>안내문<br>수업 참여는 로그인 없어도 됨<br>강의자가 부여한 코드를 입력하세요</p>
+          </div>
+
+          <div class="modal_create">
+            <span>수업 생성하기</span><span class="modal_close">&times;</span><hr>
+            <div id="room_code">000000</div>
+            <button type="button" name="createBtn">생성하기</button>
+            <p>안내문<br>임의 숫자 부여<br>js qr코드 가능하면 접근</p>
+          </div>
+
+      </div>
+    </div>
+  </body>
+  <script>
+    const modal = document.querySelector('.modal');
+    const close = document.querySelector('.modal_close');
+    const enterBtn = document.querySelector('.modal_open_enter');
+    const createBtn = document.querySelector('.modal_open_create');
+    const enter = document.querySelector('.modal_enter');
+    const create = document.querySelector('.modal_create');
+
+    enterBtn.onclick = function() {
+      modal.style.display = 'block';
+      create.style.display = 'none';
+      enter.style.display = 'block';
+    }
+    createBtn.onclick = function() {
+      modal.style.display = 'block';
+      enter.style.display = 'none';
+      create.style.display = 'block';
+    }
+
+    close.onclick = function() {
+            modal.style.display = "none";
+    }
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+  </script>
+</html>
