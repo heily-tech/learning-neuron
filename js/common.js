@@ -55,12 +55,13 @@
 					gnbPlay);
 
 					$(document).on("click",
-					".mobile #gnb>ul>li>a", function() {
+					".mobile #gnb>ul>li>ul>li>a, #gnb>ul>li:not(.sub)>a", function() {
 						$(".mobile-menu-wrap").animate({"left":"-1000px"}, 200);
 						scrollShowHide("scroll");
 						gnbleave();
 					}
 				)
+
 					function gnbPlay() {
 						var $ts = $(this);
 						if($("html").hasClass("mobile")) {
