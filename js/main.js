@@ -1,29 +1,26 @@
-function login() {
-  const result = confirm('로그인 후 사용가능합니다.\n로그인 하시겠습니까?');
-  if (result) {
-      location.href='/login';
-  }
+const modal = document.querySelector('.modal');
+const close = document.querySelector('.modal_close');
+const enterBtn = document.querySelector('.modal_open_enter');
+const createBtn = document.querySelector('.modal_open_create');
+const enter = document.querySelector('.modal_enter');
+const create = document.querySelector('.modal_create');
+
+enterBtn.onclick = function() {
+  modal.style.display = 'block';
+  create.style.display = 'none';
+  enter.style.display = 'block';
+}
+createBtn.onclick = function() {
+  modal.style.display = 'block';
+  enter.style.display = 'none';
+  create.style.display = 'block';
 }
 
-function popOpen() {
-  var modalPop = $('.modal-wrap');
-  var modalBg = $('.modal-bg');
-
-  $(modalPop).show();
-  $(modalBg).show();
-
-  $('html').css({
-    overflow: 'hidden',
-    height: 'auto';
-  });
+close.onclick = function() {
+        modal.style.display = "none";
 }
-
-function popClose() {
-  var modalPop = $('.modal-wrap');
-  var modalBg = $('.modal-bg');
-
-  $(modalPop).hide();
-  $(modalBg).hide();
-
-  $('html').removeAttr('style');
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
 }
