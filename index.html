@@ -3,18 +3,13 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title> HOME </title>
-    <link rel="stylesheet" href="css/index.css">
-    <link href="https://hangeul.pstatic.net/hangeul_static/css/NanumJangMiCe.css" rel="stylesheet">
-    <script src="js/jquery.js"></script>
-    <script src="js/isotope.pkgd.min.js"></script>
-    <script src="js/common.js"></script>
+    <title> 학습뉴런 HOME </title>
   </head>
   <body>
     <div id="header-wrap">
       <header class="header-inner">
         <h1>
-          <a href="#"> <!--HOME-->
+          <a href="index.html"> <!--HOME-->
             <picture>
               <source media="(max-width:800px)" srcset="images/common/logo-white.png">
               <img src="images/common/logo.png" alt="학습뉴런"/>
@@ -32,27 +27,27 @@
         <div class="mobile-menu-wrap">
           <div class="mobile-menu-scroll">
             <ul class="util-menu">
-              <li><a href="#">~님 환영~</a></li>
-              <li><a href="#">로그아웃</a></li>
+              <li>~님 환영~</a></li>
+              <li><a href="main0.html">방 나가기</a></li>
             </ul>
             <nav id="gnb">
               <h2 class="blind">메인 메뉴</h2>
               <ul>
                 <li class="m1 no-sub">
-                  <a href="about.html" target="mainframe">학습뉴런이란?</a>
+                  <a href="index_roomInfo.html" target="mainframe">학습뉴런이란?</a>
                 </li>
                 <li class="m2 no-sub">
-                  <a href="ques.html" target="mainframe">학생->교수질문</a>
+                  <a href="index_QnA.html" target="mainframe">학생->교수질문</a>
                 </li>
                 <li class="m3 sub">
                   <a>교수->학생퀴즈</a>
                   <ul>
-                    <li><a href="quiz_choice.html" target="mainframe">객관식 퀴즈</a></li>
-                    <li><a href="quiz_essay.html" target="mainframe">주관식 퀴즈</a></li>
+                    <li><a href="index_quizChoice.html" target="mainframe">객관식 퀴즈</a></li>
+                    <li><a href="index_quizEssay.html" target="mainframe">주관식 퀴즈</a></li>
                   </ul>
                 </li>
                 <li class="m4 no-sub">
-                  <a href="analytics.html" target="mainframe">분석도구</a>
+                  <a href="index_analytics.html" target="mainframe">분석도구</a>
                 </li>
             </nav>
           </div>
@@ -69,7 +64,7 @@
     </div>
     <div id="container">
       <section>
-        <iframe src="quiz_choice.html" id="mainframe" name="mainframe" frameborder="0" scrolling="yes" style="overflow-x:hidden; overflow:auto; width:100%; min-height:500px;"></iframe>
+        <iframe src="index_roomInfo.html" id="mainframe" name="mainframe" frameborder="0" scrolling="yes" style="overflow-x:hidden; overflow:auto; width:100%; min-height:500px;"></iframe>
       </section>
     </div>
     <footer>
@@ -80,4 +75,10 @@
       </div>
     </footer>
   </body>
+
+  <link rel="stylesheet" href="css/index.css">
+  <link href="https://hangeul.pstatic.net/hangeul_static/css/NanumJangMiCe.css" rel="stylesheet">
+  <script src="js/jquery.js"></script>
+  <script src="js/isotope.pkgd.min.js"></script>
+  <script src="js/common.js"></script>
 </html>
