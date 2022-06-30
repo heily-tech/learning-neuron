@@ -4,40 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title> HOME </title>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/common.css">
-    <link href="https://hangeul.pstatic.net/hangeul_static/css/NanumJangMiCe.css" rel="stylesheet">
-    <script src="js/main.js"></script>
   </head>
+
   <body>
-    <div id="header-wrap">
-      <header class="header-inner">
-        <h1>
-          <a href="">
-            <picture>
-              <img src="images/common/home.png"/>
-            </picture>
-          </a>
-        </h1>
-        <ul class="util-menu">
-          <li><a href="#">로그인</a></li>
-          <li><a href="#">회원가입</a></li>
-        </ul>
-      </header>
-    </div>
-    <div class="container">
+    <header></header>
+    <div class="container decoration">
       <form class="" action="" method="post">
-        <div class="">
-          <p><label for="name">이름 <input type="text" name="name" value="name"></label></p>
-          <p><small id="nameHelp" class="form-text text-muted">한글과 영문으로 이루어진 1~15자</small></p>
-          <p><label for="userId">아이디 <input type="text" name="userId" value="userId"></label></p>
-          <p><small id="userIdHelp" class="form-text text-muted">영문으로 이루어진 6~12자</small></p>
-          <p><label for="password">비밀번호 <input type="text" name="password" value="password"></label></p>
-          <p><small id="passwordHelp" class="form-text text-muted">영문과 특수문자 (!, @, #, $)로 이루어진 6~20자</small></p>
-          <p><label for="nickname">닉네임 <input type="text" name="nickname" value="nickname"></label></p>
-          <p><small id="nicknameHelp" class="form-text text-muted">한글과 영문으로 이루어진 2~12자, 단어사이 공백은 허용</small></p>
-          <br><button type="submit" class="btn btn-primary">가입</button>
+        <table class="joinTable">
+          <tr>
+            <td>이름</td>
+            <td><input type="text" name="name" placeholder="name"></td>
+          </tr>
+          <tr><td colspan="2" id="nameHelp">한글과 영문으로 이루어진 1~15자<hr></td></tr>
+          <tr>
+            <td>아이디</td>
+            <td><input type="text" name="userId" placeholder="userId"></td>
+          </tr>
+          <tr><td colspan="2" id="userIdHelp">영문으로 이루어진 6~12자<hr></td></tr>
+          <tr>
+            <td>비밀번호</td>
+            <td><input type="text" name="password" placeholder="password"></td>
+          </tr>
+          <tr><td colspan="2" id="passwordHelp">영문과 특수문자 (!, @, #, $)로 이루어진 6~20자<hr></td></tr>
+          <tr>
+            <td>닉네임</td>
+            <td><input type="text" name="nickname" placeholder="nickname"></td>
+          </tr>
+          <tr><td colspan="2" id="nicknameHelp">한글과 영문으로 이루어진 1~15자<hr></td></tr>
+        </table>
+        <button type="submit" class="main_btn">가입</button>
       </form>
     </div>
+  </div>
+  <footer></footer>
   </body>
+
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://hangeul.pstatic.net/hangeul_static/css/NanumJangMiCe.css" rel="stylesheet">
+  <script src="js/main.js"></script>
 </html>
