@@ -13,6 +13,69 @@
   border-radius: 20px;
   border: 1.5px solid black;
 }
-.main_btn {  margin: 10px;  background: #fce205;  width: 150px; 
+.main_btn {  margin: 10px;  background: #fce205;  width: 150px;
   border: 1.5px solid black;  border-radius: 20px;
   padding: 5px 20px;  font-family: 'NanumJangMiCe';  font-size: 32px; }
+
+.createTable {
+  margin-left: 20px;
+}
+#roomTitle, #roomEntre {
+    font-family: 'NanumJangMiCe';
+    font-size: 30px;
+    color : black;
+    text-align: left;
+    border-bottom: 2px solid black;
+}
+#roomName, #roomCode {
+  font-family: 'NanumJangMiCe';
+  font-size: 23px;
+  width: 150px;
+}
+
+.joinTable {
+  font-family: 'NanumJangMiCe';
+  margin-left: 15px;
+  font-size: 25px;
+  color: black;
+  border-spacing: 0px 0px;
+  text-align: left;
+}
+.joinTable td {
+  padding-left: 3px;
+}
+
+.joinTable input {
+  font-family: 'NanumJangMiCe';
+  font-size: 20px;
+  padding: 3px;
+  color: #3b3b3b;
+}
+
+#nameHelp, #userIdHelp, #passwordHelp, #nicknameHelp {
+  font-size: 12px;
+  font-family: sans-serif;
+  text-align: left;
+  padding-left: 3px;
+  padding-top: 3px;
+  color: #6e6e6e;
+}
+
+.loginTable {
+  font-family: 'NanumJangMiCe';
+  margin-left: 20px;
+}
+
+.loginTable td {
+   font-size: 28px;
+   text-align: right;
+}
+
+.loginTable td input {
+  font-size: 20px;
+  padding: 2px;
+  text-align: center;
+  width: 180px;
+  font-family: 'NanumJangMiCe';
+  margin: 10px;
+}
