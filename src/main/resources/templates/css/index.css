@@ -16,10 +16,29 @@ body{
 #header-wrap {
   margin-bottom: 40px; }
 #header-wrap h1 {
-  text-align: center; padding: 58px 0 0 0;  margin-bottom: 20px;  }
+  text-align: center; padding: 58px 0 0 0;  margin-bottom: 10px;  }
 .header-inner {
-  position: relative;  height: 172px;  max-width: 1008px;  margin: 0 auto;  }
+  position: relative;  height: 122px;  max-width: 1008px;  margin: 0 auto;  }
 
+.tab_menu{    position:relative; }
+.tab_menu .list{    overflow:hidden; padding: 0 180px 0 180px;   }
+.tab_menu .list li {
+    width:25%;  float: left;   position: relative;}
+.tab_menu .list li.is_on .btn {
+    font-weight:bold; color:green;
+}
+
+.tab_menu .list .btn{
+    font-family: "NanumJangmiCe";  font-size: 30px;  color: black;
+    text-align:center;  display: block;  height:45px;
+}
+
+.tab_menu .cont_area .cont {
+    padding: 50px;
+    background: #FDE7BC;
+    border-radius: 10px;
+    height: 100%;
+}
 #container {
   padding: 50px;
   background: #FDE7BC;
@@ -144,9 +163,18 @@ Mobile:767px;
     }
     .util-menu li{
         float: none;
+        right: 10px;
         padding: 0;
         margin: 0;
         background: none;
+    }
+    .footerimg {
+        margin-top: 10px;
+    }
+    .tab_menu .list{    overflow:hidden; padding: 0 10px 20px 10px;   }
+    .tab_menu .list .btn{
+        font-family: "NanumJangmiCe";  font-size: 25px;  color: black;
+        text-align:center;  display: block;  height:30px;
     }
     .mobile-menu-wrap{
         position: fixed;

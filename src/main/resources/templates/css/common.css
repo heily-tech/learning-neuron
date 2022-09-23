@@ -21,15 +21,4 @@ body{
   color: black;  display: block;  line-height:30px; }
 .util-menu li:first-child{
     background: none;    margin-left: 0;    padding: 0; }
-$(function() {
-    var container_width = $("#container").width();
-    var container_height = container_width / 2;
 
-    $("#container iframe").css("width","100%");
-    $("#container iframe").css("height", container_height+"px");
-
-    $(window).resize(function() {
-    var container_resize_height = $("#container").width() / 2;
-    $("#container iframe").css("height", container_resize_height+"px");
-    });
-  });

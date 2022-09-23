@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <title> 학습뉴런 HOME </title>
+    </head>
+
+    <body>
+        <div id="header-wrap">
+            <header class="header-inner">
+                <h1>
+                    <a href="index.html"> <!--HOME-->
+                        <picture>
+                            <source media="(max-width:800px)" srcset="images/common/logo-white.png">
+                            <img src="images/common/logo.png" alt="학습뉴런"/>
+                        </picture>
+                    </a>
+                </h1>
+            </header>
+
+        </div>
+        <div class="tab_menu ">
+            <ul class="list">
+                <li class="is_on">
+                    <a href="#tab1" class="btn">수업 소개</a>
+                </li>
+                <li>
+                    <a href="#tab2" class="btn">질문하기</a>
+                </li>
+                <li>
+                    <a href="#tab3" class="btn">객관식 주관식</a>
+                </li>
+                <li>
+                    <a href="#tab4" class="btn">분석 도구</a>
+                </li>
+            </ul>
+
+            <div class="cont_area" id="container">
+                <div id="tab1" class="cont">
+                    Tab Content1
+                </div>
+                <div id="tab2" class="cont">
+                    Tab Content2
+                </div>
+                <div id="tab3" class="cont">
+                    Tab Content3
+                </div>
+                <div id="tab4" class="cont">
+                    Tab Content4
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <footer>
+            <hr>
+            <ul class="util-menu">
+                <li> &nbsp   ~님 환영합니다.~</li>
+                <li><a href="main0.html">수업 나가기</a></li>
+            </ul>
+            <div class="footerimg">
+                <img src="images/common/logo.png" width="100px">
+                <font size=2px><b>2022, Capstone Design.</b></font>
+            </div>
+
+        </footer>
+    </body>
+</html>
+<link rel="stylesheet" href="css/index.css">
+<link href="https://hangeul.pstatic.net/hangeul_static/css/NanumJangMiCe.css" rel="stylesheet">
+<script src="js/jquery.js"></script>
+<script src="js/isotope.pkgd.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+    const tabList = document.querySelectorAll('.tab_menu .list li');
+    const contents = document.querySelectorAll('.tab_menu .cont_area .cont')
+    let activeCont = ''; // 현재 활성화 된 컨텐츠 (기본:#tab1 활성화)
+
+    for(var i = 0; i < tabList.length; i++){
+        tabList[i].querySelector('.btn').addEventListener('click', function(e){
+            e.preventDefault();
+            for(var j = 0; j < tabList.length; j++){
+                // 나머지 버튼 클래스 제거
+                tabList[j].classList.remove('is_on');
+
+                // 나머지 컨텐츠 display:none 처리
+                contents[j].style.display = 'none';
+            }
+
+            // 버튼 관련 이벤트
+            this.parentNode.classList.add('is_on');
+
+            // 버튼 클릭시 컨텐츠 전환
+            activeCont = this.getAttribute('href');
+            document.querySelector(activeCont).style.display = 'block';
+        });
+    }
+</script>
