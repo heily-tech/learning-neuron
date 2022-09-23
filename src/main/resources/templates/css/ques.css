@@ -1,0 +1,50 @@
+.container {  margin: auto;  width: 100vw;  height: auto; }
+div {  max-width: 808px;  word-wrap: break-word;
+  margin-bottom: 20px;  line-height: 24px;}
+
+.clear {  clear: both;}
+
+.questionaire {  width: 70vw; max-width: 700px; position: relative;  padding: 2px 20px;  background: #E5E5EA;
+  border-radius: 25px;  color: black;  float: left;}
+.questionaire:before {  content: "";  position: absolute;  z-index: 2;
+  bottom: -2px;  left: -7px;  height: 20px;  border-left: 20px solid #E5E5EA;
+  border-bottom-right-radius: 16px 14px;  -webkit-transform: translate(0, -2px);}
+.questionaire:after {  content: "";  position: absolute;  z-index: 3;
+  bottom: -2px;  left: 4px;  width: 26px;  height: 20px;  background: #FDE7BC;
+  border-bottom-right-radius: 10px;  -webkit-transform: translate(-30px, -2px);}
+
+.answer {  width: 70vw; max-width: 700px; position: relative;  padding: 2px 20px;  color: white;
+  background: #0B93F6;  border-radius: 25px;  float: right; right: 60px;}
+.answer:before {  content: "";  position: absolute;  z-index: -1;
+  bottom: -2px;  right: -7px;  height: 20px;  border-right: 20px solid #0B93F6;
+  border-bottom-left-radius: 16px 14px;  -webkit-transform: translate(0, -2px);}
+.answer:after {  content: "";  position: absolute;  z-index: 1;
+  bottom: -2px;  right: -56px;  width: 26px;  height: 20px;  background: #FDE7BC;
+  border-bottom-left-radius: 10px;  -webkit-transform: translate(-30px, -2px);}
+
+.nowAnswer textarea {width: 90vw; max-width: 750px;
+  min-height: 35px;  font-size: 20px;  text-align: right;}
+.nowAnswer hr {
+  width: 90vw;  max-width: 750px; float: left;
+}
+.ques_btn button {background: #fce205;  width: 100px;
+  border: 1.5px solid black;  border-radius: 10px;
+  padding: 5px 5px;  font-family: 'NanumJangMiCe';  font-size: 25px; }
+
+
+/*
+PC:1009px~
+Tablet:768px ~ 1008px
+Mobile:767px;
+*/
+@media (max-width:1008px) {
+}
+@media (min-width:860px) and (max-width:1008px) {
+  textarea {    background: pink;  }
+}
+@media (min-width:724px) and (max-width:859px) {
+  textarea {    background: yellow;   }
+}
+@media (max-width:723px) {
+  textarea {    background: blue;  }
+}
