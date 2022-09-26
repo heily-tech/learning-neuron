@@ -5,21 +5,33 @@
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <title> 학습뉴런 HOME </title>
         <style type="text/css">
-            .analyze {  border: 1px solid lightgray;  border-radius: 20px;  background-color: #fffcf6;
-                margin-bottom: 13px;  padding: 8px;  height: 100px;}
-            .view {  height: 250px;  }
+            .analyze_view {  border: 0px solid lightgray;  border-radius: 20px;  background-color: #fffcf6;
+                margin-bottom: 13px;  padding: 8px;  height: 100px; box-shadow: 2px 2px 2px lightgrey;}
+            .large_analyze_view {  height: 250px; }
             .left {  position: relative;  float: left;  width: 49%;  }
             .right {  position: relative;  float: right;  width: 49%;  }
             .view_header {  font-size: 18px;  }
             .view_body { font-size: 15px; height: 26px;}
-            img {  border-radius: 10px; margin-top: 5px;  margin-left: 20px;}
+            #qr {  border-radius: 10px; margin-top: 5px;  margin-left: 20px;  box-shadow: 2px 2px 2px lightgrey;}
             #export {  margin: 10px;  background: #fce205;  width: 210px;
                 border: 2px solid black;  border-radius: 20px;
                 padding: 5px 20px;  font-family: 'NanumJangMiCe';  font-size: 33px;
                 float: right;  }
+            .question_view {
+                border: 0px solid lightgray;  border-radius: 20px;  background-color: #fffcf6;
+                margin-bottom: 13px;  padding: 8px;  height: 100px; width: 100%; box-shadow: 2px 2px 2px lightgrey;
+                font-size: 18px;
+            }
+            .question_view input {
+                width: 80%; font-size: 23px; border: none; border-bottom: 1px solid black;
+            }
+            .question_view button {
+                margin-left: 10px;  background: #fce205;  width: 80px;
+                border: 2px solid black;  border-radius: 5px;
+                font-family: 'NanumJangMiCe';  font-size: 25px;
+            }
         </style>
     </head>
-
     <body>
         <div id="header-wrap">
             <header class="header-inner">
@@ -50,25 +62,25 @@
             </ul>
             <div class="cont_area" id="container">
                 <div id="tab1" class="cont">
-                    <div class="analyze left">
+                    <div class="analyze_view left">
                         <div class="view_header"><span>수업 참여자 수</span><span style="float:right">000</span></div><hr>
                         <div class="view_body">dd</div>
                         <div class="view_body">dd</div>
                     </div>
-                    <div class="analyze right">
+                    <div class="analyze_view right">
                         <div class="view_header"><span>총 질문 수</span><span style="float: right">000</span></div><hr>
                         <div class="view_body"><span>받은 좋아요 수</span><span style="float: right">000</span></div>
                         <div class="view_body"><span>ddd</span></div>
                     </div>
-                    <div class="analyze left">
+                    <div class="analyze_view left">
                         <div class="view_header"><span>최근 질문</span></div><hr>
                         <div class="view_body">최근 질문</div>
                     </div>
-                    <div class="analyze right">
+                    <div class="analyze_view right">
                         <div class="view_header"><span>말한 생각들</span><span style="float: right">000</span></div><hr>
                         <div class="view_body">투표별 참여 평균</div>
                     </div>
-                    <div class="analyze view left">
+                    <div class="analyze_view large_analyze_view left">
                         <div class="view_header"><span>나눈 생각들</span></div><hr>
                         워드클라우드
                     </div>
@@ -76,16 +88,31 @@
                         <h2>방 코드 | 000000</h2>
                         <!--<hr><button>export</button>-->
                     </div>
-                    <img src="https://chart.apis.google.com/chart?cht=qr&chs=200x200&chl=학습뉴런" />
+                    <img id="qr" src="https://chart.apis.google.com/chart?cht=qr&chs=200x200&chl=학습뉴런" />
                 </div>
-
-
-
-
-
                 <div id="tab2" class="cont">
-                    질문답
+                    <div class="question_view">
+                        <div><span>Q. 집에 가 고 싶 나 요 ?</span></div><hr>
+                        <div><span>A. <input type="text"></span><button>입력</button></div>
+                    </div>
+                    <div class="question_view">
+                        <div><span>Q. </span></div><hr>
+                        <div><span>A. <input type="text"></span><button>입력</button></div>
+                    </div>
+                    <div class="question_view">
+                        <div><span>Q. </span></div><hr>
+                        <div><span>A. <input type="text"></span><button>입력</button></div>
+                    </div>
+                    <div class="question_view">
+                        <div><span>Q. </span></div><hr>
+                        <div><span>A. <input type="text"></span><button>입력</button></div>
+                    </div>
+                    <div>
+                        이전 | 1 | 2 | 다음
+                    </div>
                 </div>
+
+
                 <div id="tab3" class="cont">
                     <div class="header">
                         <span id="num"><label>문제 번호</label></span>
