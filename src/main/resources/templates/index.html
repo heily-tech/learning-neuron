@@ -4,13 +4,26 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <title> 학습뉴런 HOME </title>
+        <style type="text/css">
+            .analyze {  border: 1px solid lightgray;  border-radius: 20px;  background-color: #fffcf6;
+                margin-bottom: 13px;  padding: 8px;  height: 100px;}
+            .view {  height: 250px;  }
+            .left {  position: relative;  float: left;  width: 49%;  }
+            .right {  position: relative;  float: right;  width: 49%;  }
+            .view_header {  font-size: 18px;  }
+            .view_body { font-size: 15px; height: 26px;}
+            img {  border-radius: 10px; margin-top: 5px;  margin-left: 20px;}
+            #export {  margin: 10px;  background: #fce205;  width: 210px;
+                border: 2px solid black;  border-radius: 20px;
+                padding: 5px 20px;  font-family: 'NanumJangMiCe';  font-size: 33px;
+                float: right;  }
+        </style>
     </head>
-
     <body>
         <div id="header-wrap">
             <header class="header-inner">
                 <h1>
-                    <a href="index_pro.html"> <!--HOME-->
+                    <a href="index.html"> <!--HOME-->
                         <picture>
                             <source media="(max-width:800px)" srcset="images/common/logo-white.png">
                             <img src="images/common/logo.png" alt="학습뉴런"/>
@@ -37,15 +50,33 @@
 
             <div class="cont_area" id="container">
                 <div id="tab1" class="cont">
-                    <h2>
-                        New-Learn <br>
-                        소통하는 수업을 위한 Neuron<br>
-                        질의응답형 교육 보조 및 분석도구
-                        학습뉴런 (New-Learn), 소통하는 수업을 위한 뉴런, 질의응답형 교육 보조 및 분석도구
-                        수업 코드 | 분석 통계 (참여자 수, 이떄까지 올라온 질문들, 좋아요 많은 질문답 등)
-                        <hr>
-                        <img src="https://chart.apis.google.com/chart?cht=qr&chs=200x200&chl=학습뉴런" />
-                    </h2>
+                    <div class="analyze left">
+                        <div class="view_header"><span>수업 참여자 수</span><span style="float:right">000</span></div><hr>
+                        <div class="view_body">dd</div>
+                        <div class="view_body">dd</div>
+                    </div>
+                    <div class="analyze right">
+                        <div class="view_header"><span>총 질문 수</span><span style="float: right">000</span></div><hr>
+                        <div class="view_body"><span>받은 좋아요 수</span><span style="float: right">000</span></div>
+                        <div class="view_body"><span>ddd</span></div>
+                    </div>
+                    <div class="analyze left">
+                        <div class="view_header"><span>최근 질문</span></div><hr>
+                        <div class="view_body">최근 질문</div>
+                    </div>
+                    <div class="analyze right">
+                        <div class="view_header"><span>말한 생각들</span><span style="float: right">000</span></div><hr>
+                        <div class="view_body">투표별 참여 평균</div>
+                    </div>
+                    <div class="analyze view left">
+                        <div class="view_header"><span>나눈 생각들</span></div><hr>
+                        워드클라우드
+                    </div>
+                    <div id="export">
+                        <h2>방 코드 | 000000</h2>
+                        <!--<hr><button>export</button>-->
+                    </div>
+                    <img src="https://chart.apis.google.com/chart?cht=qr&chs=200x200&chl=학습뉴런" />
                 </div>
                 <div id="tab2" class="cont">
                     질문답

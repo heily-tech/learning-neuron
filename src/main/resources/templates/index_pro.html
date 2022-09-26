@@ -4,6 +4,20 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <title> 학습뉴런 HOME </title>
+        <style type="text/css">
+            .analyze {  border: 1px solid lightgray;  border-radius: 20px;  background-color: #fffcf6;
+                margin-bottom: 13px;  padding: 8px;  height: 100px;}
+            .view {  height: 250px;  }
+            .left {  position: relative;  float: left;  width: 49%;  }
+            .right {  position: relative;  float: right;  width: 49%;  }
+            .view_header {  font-size: 18px;  }
+            .view_body { font-size: 15px; height: 26px;}
+            img {  border-radius: 10px; margin-top: 5px;  margin-left: 20px;}
+            #export {  margin: 10px;  background: #fce205;  width: 210px;
+                border: 2px solid black;  border-radius: 20px;
+                padding: 5px 20px;  font-family: 'NanumJangMiCe';  font-size: 33px;
+                float: right;  }
+        </style>
     </head>
 
     <body>
@@ -34,19 +48,41 @@
                     <a href="#tab4" class="btn">생각 나누기</a>
                 </li>
             </ul>
-
             <div class="cont_area" id="container">
                 <div id="tab1" class="cont">
-                    <h2>
-                        New-Learn <br>
-                        소통하는 수업을 위한 Neuron<br>
-                        질의응답형 교육 보조 및 분석도구
-                        학습뉴런 (New-Learn), 소통하는 수업을 위한 뉴런, 질의응답형 교육 보조 및 분석도구
-                        수업 코드 | 분석 통계 (참여자 수, 이떄까지 올라온 질문들, 좋아요 많은 질문답 등)
-                        <hr>
-                        <img src="https://chart.apis.google.com/chart?cht=qr&chs=200x200&chl=학습뉴런" />
-                    </h2>
+                    <div class="analyze left">
+                        <div class="view_header"><span>수업 참여자 수</span><span style="float:right">000</span></div><hr>
+                        <div class="view_body">dd</div>
+                        <div class="view_body">dd</div>
+                    </div>
+                    <div class="analyze right">
+                        <div class="view_header"><span>총 질문 수</span><span style="float: right">000</span></div><hr>
+                        <div class="view_body"><span>받은 좋아요 수</span><span style="float: right">000</span></div>
+                        <div class="view_body"><span>ddd</span></div>
+                    </div>
+                    <div class="analyze left">
+                        <div class="view_header"><span>최근 질문</span></div><hr>
+                        <div class="view_body">최근 질문</div>
+                    </div>
+                    <div class="analyze right">
+                        <div class="view_header"><span>말한 생각들</span><span style="float: right">000</span></div><hr>
+                        <div class="view_body">투표별 참여 평균</div>
+                    </div>
+                    <div class="analyze view left">
+                        <div class="view_header"><span>나눈 생각들</span></div><hr>
+                        워드클라우드
+                    </div>
+                    <div id="export">
+                        <h2>방 코드 | 000000</h2>
+                        <!--<hr><button>export</button>-->
+                    </div>
+                    <img src="https://chart.apis.google.com/chart?cht=qr&chs=200x200&chl=학습뉴런" />
                 </div>
+
+
+
+
+
                 <div id="tab2" class="cont">
                     질문답
                 </div>
@@ -68,67 +104,9 @@
                             </div>
                         </form>
                     </div>
-                    <!--
-                    학생용 객관식 퀴즈
-                    <div class="container">
-                      <div class="info">
-                        <span id="num">문제 번호</span>
-                        <span id="name">문제명</span>
-                        <span id="lecturer">작성자</span>
-                      </div>
-                      <div class="content">
-                        <form method="get" action="">
-                          <div class="choicebox">
-                            <p>Color</p>
-                            <label><input type="radio" name="color" value="blue" checked> Blue</label><br>
-                            <label><input type="radio" name="color" value="red"> Red</label>
-                            <p><input type="submit" value="Submit"> <input type="reset" value="Reset"></p>
-                          </div>
-                          <div>
-                          <이전 다음>
-                          </div>
-                        </form>
-                      </div>
-                    -->
                 </div>
                 <div id="tab4" class="cont">
-                    <div class="header">
-                        <input type="text" placeholder="질문을 입력하세요."></input>
-                    </div>
 
-                    <!--
-                    <div class="header"> <h1>내가 좋아하는 과일은 ????</h1></div>
-                    <div class="chart-area">
-                       <div id="container"></div>
-                    </div>
-                  </body>
-                  <script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script>
-                  <script src="https://cdn.anychart.com/releases/v8/js/anychart-tag-cloud.min.js"></script>
-                  <script>
-                    anychart.onDocumentReady(function () {
-                      var count = Math.random() * 100;
-                      var data = [
-                          {
-                              "x": "사과", "value": 15, category: "red"
-                          },{
-                              "x": "바나나", "value": 12, category: "yellow"
-                          },{
-                              "x": "수박", "value": 10, category: "blue"
-                          },{
-                              "x": "참외", "value": 5, category: "yellow"
-                          },{
-                              "x": "자몽", "value": 3, category: "orange"
-                          },{
-                              "x": "다조아", "value": 2, category: "black"
-                          }
-                      ];
-                      var chart = anychart.tagCloud(data);
-                      chart.angles([0]);
-                      chart.container("container");
-                      // chart.getCredits().setEnabled(false);
-                      chart.draw();
-                    });
-                  </script>-->
                 </div>
             </div>
         </div>
@@ -151,12 +129,13 @@
 <link rel="stylesheet" href="css/index.css">
 <link href="https://hangeul.pstatic.net/hangeul_static/css/NanumJangMiCe.css" rel="stylesheet">
 <script src="js/jquery.js"></script>
-<script src="js/isotope.pkgd.min.js"></script>
+<!--<script src="js/isotope.pkgd.min.js"></script>-->
 <script src="js/common.js"></script>
 <script>
     const tabList = document.querySelectorAll('.tab_menu .list li');
     const contents = document.querySelectorAll('.tab_menu .cont_area .cont')
     let activeCont = ' '; // 현재 활성화 된 컨텐츠 (기본:#tab1 활성화)
+    activeCont = '#tab1';
 
     for(var i = 0; i < tabList.length; i++){
         tabList[i].querySelector('.btn').addEventListener('click', function(e){
@@ -174,6 +153,7 @@
 
             // 버튼 클릭시 컨텐츠 전환
             activeCont = this.getAttribute('href');
+            console.log(activeCont);
             document.querySelector(activeCont).style.display = 'block';
         });
     }

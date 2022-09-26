@@ -40,7 +40,7 @@ body{
     height: 100%;
 }
 #container {
-  padding: 50px;
+  padding: 10px;
   background: #FDE7BC;
   border-radius: 10px;
   height: 100%;
@@ -127,7 +127,7 @@ Mobile:767px;
 */
 @media (max-width:1008px) {
     #container{
-        padding: 30px 30px;
+        padding: 5px 5px;
     }
     .site-choice{
         left: 10px;
@@ -256,5 +256,15 @@ Mobile:767px;
     }
     .mobile-menu-close, .mobile-menu-open {
       display: block;
+    }
+    .left {
+        position: relative;
+        float : left;
+        width: 100%
+    }
+    .right {
+        position: relative;
+        float: left;
+        width: 100%
     }
 }
