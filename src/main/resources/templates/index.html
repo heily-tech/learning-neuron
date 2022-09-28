@@ -25,9 +25,9 @@
             .question_view input {
                 width: 80%; font-size: 23px; border: none; border-bottom: 1px solid black;
             }
-            .question_view button {
+            .question_view_btn {
                 margin-left: 10px;  background: #fce205;  width: 80px;
-                border: 2px solid black;  border-radius: 5px;
+                border: 2px solid black;  border-radius: 5px; margin-bottom: 10px;
                 font-family: 'NanumJangMiCe';  font-size: 25px;
             }
         </style>
@@ -93,11 +93,19 @@
                 </div>
                 <div id="tab2" class="cont">
                     <div class="question_view">
-                        <div><span>강의자에게 전달할 질문을 입력하세요</span></div><hr>
-                        <div><span>Q. <input type="text"></span><button>입력</button></div>
+                        <div><span>강의자에게 전달할 질문을 입력하세요.</span></div><hr>
+                        <div><span>Q. <input type="text"></span></div>
                     </div>
-
-                </div>
+                    <div>
+                       <button class="question_view_btn">다시 입력</button>
+                       <button class="question_view_btn">저장</button>
+                    </div>
+                    <hr>
+                    <div class="question_view">
+                        <div><span>다른 수강자들의 질문 목록</span></div><hr>
+                        <div><span><a href="#">Q. what is your personal color?</a></span></div>
+                        <div><span><a href="#">Q. what is your favorite color?</a></span></div>
+                    </div>
 
                 <div id="tab3" class="cont">
                     <div class="header">
