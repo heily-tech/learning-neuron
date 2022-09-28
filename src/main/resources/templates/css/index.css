@@ -176,6 +176,13 @@ Mobile:767px;
         font-family: "NanumJangmiCe";  font-size: 25px;  color: black;
         text-align:center;  display: block;  height:30px;
     }
+
+    .question_view input {
+        width: 70%;
+    }
+    .question_view button {
+        width: 65px;
+    }
     .mobile-menu-wrap{
         position: fixed;
         left: -1000px;

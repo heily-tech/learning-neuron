@@ -30,6 +30,35 @@
                 border: 2px solid black;  border-radius: 5px;
                 font-family: 'NanumJangMiCe';  font-size: 25px;
             }
+            .choice_view {
+                border: 0px solid lightgray;  border-radius: 20px;  background-color: #fffcf6;
+                margin-bottom: 13px;  padding: 8px;  height: 400px; width: 100%; box-shadow: 2px 2px 2px lightgrey;
+            }
+            .choice_view #name input {
+                width:78%; border: none; border-bottom: 1px solid black; font-size: 18px;
+            }
+            .choice_view button {
+                margin-left: 10px;  background: #fce205;  width: 80px;
+                border: 2px solid black;  border-radius: 5px;
+                font-family: 'NanumJangMiCe';  font-size: 20px;
+            }
+            .essay_view {
+                border: 0px solid lightgray;  border-radius: 20px;  background-color: #fffcf6;
+                margin-bottom: 13px;  padding: 8px;  height: 400px; width: 100%; box-shadow: 2px 2px 2px lightgrey;
+            }
+            .essay_view input {
+                width:78%; border: none; border-bottom: 1px solid black; font-size: 18px;
+            }
+            .essay_view button {
+                margin-left: 10px;  background: #fce205;  width: 80px;
+                border: 2px solid black;  border-radius: 5px;
+                font-family: 'NanumJangMiCe';  font-size: 20px;
+            }
+            .canvas {
+                height: 300px;
+                border : 1px solid black;
+                margin: 10px;
+            }
         </style>
     </head>
     <body>
@@ -121,27 +150,41 @@
 
 
                 <div id="tab3" class="cont">
-                    <div class="header">
-                        <span id="num"><label>문제 번호</label></span>
-                        <span id="name"><input type="text" placeholder="문제를 입력하세요."></span>
-                        <span id="lecturer"><label>작성자</label></span>
-                    </div>
-                    <div class="content">
-                        <form method="get" action="">
-                            <div class="choicebox">
-                                <p>1</p>
-                                <label><input type="radio" name="color" value="blue" checked> <input type="text" placeholder="문제를 입력하세요."></label><br>
-                                <label><input type="radio" name="color" value="red"> <input type="text" placeholder="문제를 입력하세요."></label><br>
-                                <label><input type="radio" name="color" value="blue" checked> <input type="text" placeholder="문제를 입력하세요."></label><br>
-                                <label><input type="radio" name="color" value="red"> <input type="text" placeholder="문제를 입력하세요."></label>
-                                <p><input type="submit" value="Submit"> <input type="reset" value="Reset"></p>
-                            </div>
-                        </form>
+                    <div class="choice_view">
+                        <div class="view_header">
+                            <span id="num">Q. </span>
+                            <span id="name"> <input type="text" placeholder="질문을 입력하세요."></span>
+                            <span id="lecturer" style="float: right">작성자</span>
+                        </div><hr>
+                        <div class="view_body">
+                            <form method="get" action="">
+                                <div>
+                                    <p>1</p>
+                                    <label><input type="radio" name="color" value="blue" checked> <input type="text" placeholder="문제를 입력하세요."></label><br>
+                                    <label><input type="radio" name="color" value="red"> <input type="text" placeholder="문제를 입력하세요."></label><br>
+                                    <label><input type="radio" name="color" value="blue" checked> <input type="text" placeholder="문제를 입력하세요."></label><br>
+                                    <label><input type="radio" name="color" value="red"> <input type="text" placeholder="문제를 입력하세요."></label>
+                                    <p><button type="submit">저장</button><button type="reset">다시 쓰기</button></p>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
-                <div id="tab4" class="cont">
 
-                </div>
+                <div id="tab4" class="cont">
+                    <div class="essay_view">
+                        <div class="view_header">
+                            <span>Q. <input type="text" placeholder="질문을 입력하세요."></span>
+                        </div><hr>
+                        <div class="view_body">
+                            <div class="canvas">
+                                dd
+                            </div>
+                            <div style="float : right; margin-right: 9px">
+                                <button type="submit">저장</button><button type="reset">새로고침</button>
+                            </div>
+                        </div>
+                    </div>
             </div>
         </div>
     </div>
