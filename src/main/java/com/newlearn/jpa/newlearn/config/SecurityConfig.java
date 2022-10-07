@@ -25,7 +25,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     //http 요청에 대한 보안 설정
     protected void configure(HttpSecurity http) throws Exception {
         http.formLogin()
-                .loginPage("/content/login")
+                .loginPage("/login")
                 .defaultSuccessUrl("/main")
                 .usernameParameter("userId")
                 .failureUrl("/main")

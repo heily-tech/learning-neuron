@@ -25,7 +25,7 @@ public class MemberController {
     @GetMapping("/new")
     public String saveForm(Model model){
         model.addAttribute("memberSaveDTO", new MemberSaveDTO());
-        return "content/join";
+        return "/join";
     }
     @PostMapping("/new")
     public String save(@RequestBody MemberSaveDTO saveDTO){
@@ -34,9 +34,9 @@ public class MemberController {
     }
 
     //로그인
-    @GetMapping("login")
+    @GetMapping("/login")
     public String loginMember(){
-        return "content/login";
+        return "login";
     }
     //로그인 에러 페이지는 없음.
 
