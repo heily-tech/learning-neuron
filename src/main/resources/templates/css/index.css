@@ -183,6 +183,9 @@ Mobile:767px;
     .question_view button {
         width: 65px;
     }
+    .essay_view button {
+        width: 63px;
+    }
     .mobile-menu-wrap{
         position: fixed;
         left: -1000px;

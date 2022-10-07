@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" xmlns:margin-right="http://www.w3.org/1999/xhtml">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -30,7 +30,42 @@
                 border: 2px solid black;  border-radius: 5px;
                 font-family: 'NanumJangMiCe';  font-size: 25px;
             }
-
+            .choice_view {
+                border: 0px solid lightgray;  border-radius: 20px;  background-color: #fffcf6; font-size: 18px;
+                margin-bottom: 13px;  padding: 8px;  height: 170px; width: 100%; box-shadow: 2px 2px 2px lightgrey;
+            }
+            .choice_view_list {
+                border: 0px solid lightgray;  border-radius: 20px;  background-color: #fffcf6; font-size: 18px;
+                margin-bottom: 13px;  padding: 8px;  width: 100%; box-shadow: 2px 2px 2px lightgrey;
+            }
+            .choice_view #name {
+                width:78%; border: none; border-bottom: 0px solid black; font-size: 18px;
+            }
+            .choice_view label input{
+                border: none; font-size: 15px; margin: 2px;
+            }
+            .choice_view button {
+                margin-left: 10px;  background: #fce205;  width: 80px;
+                border: 2px solid black;  border-radius: 5px;
+                font-family: 'NanumJangMiCe';  font-size: 20px;
+            }
+            .essay_view {
+                border: 0px solid lightgray;  border-radius: 20px;  background-color: #fffcf6;
+                margin-bottom: 13px;  padding: 8px;  height: 400px; width: 100%; box-shadow: 2px 2px 2px lightgrey;
+            }
+            .essay_view input {
+                width:75%; border: none; border-bottom: 1px solid black; font-size: 18px;
+            }
+            .essay_view button {
+                margin-left: 10px;  background: #fce205;  width: 80px;
+                border: 2px solid black;  border-radius: 5px;
+                font-family: 'NanumJangMiCe';  font-size: 20px;
+            }
+            .canvas {
+                height: 300px;
+                border : 1px solid black;
+                margin: 10px;
+            }
         </style>
     </head>
     <body>
@@ -107,86 +142,49 @@
                         <div><span><a href="#">Q. what is your personal color?</a></span></div>
                         <div><span><a href="#">Q. what is your favorite color?</a></span></div>
                     </div>
+                </div>
 
                 <div id="tab3" class="cont">
-                    <div class="header">
-                        <span id="num"><label>문제 번호</label></span>
-                        <span id="name"><input type="text" placeholder="문제를 입력하세요."></span>
-                        <span id="lecturer"><label>작성자</label></span>
+                    <div class="choice_view">
+                        <div class="view_header">
+                            <span id="name">Q. 작성된 질문입니다</span>
+                            <span id="lecturer" style="float: right">작성자</span>
+                        </div><hr>
+                        <div class="view_body">
+                            <form method="get" action="">
+                                <div>
+                                    <label><input type="radio" name="color" value="blue" checked>blue</label><br>
+                                    <label><input type="radio" name="color" value="red">red</label><br>
+                                    <label><input type="radio" name="color" value="orange">orange</label><br>
+                                    <label><input type="radio" name="color" value="purple">purple</label><br>
+                                    <p style="float:right"><button type="submit">저장</button><button type="reset">다시 쓰기</button></p>
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                    <div class="content">
-                        <form method="get" action="">
-                            <div class="choicebox">
-                                <p>1</p>
-                                <label><input type="radio" name="color" value="blue" checked> <input type="text" placeholder="문제를 입력하세요."></label><br>
-                                <label><input type="radio" name="color" value="red"> <input type="text" placeholder="문제를 입력하세요."></label><br>
-                                <label><input type="radio" name="color" value="blue" checked> <input type="text" placeholder="문제를 입력하세요."></label><br>
-                                <label><input type="radio" name="color" value="red"> <input type="text" placeholder="문제를 입력하세요."></label>
-                                <p><input type="submit" value="Submit"> <input type="reset" value="Reset"></p>
-                            </div>
-                        </form>
+                    <div class="choice_view_list">
+                        <div><span>말한 생각들</span></div><hr>
+                        <div><span><a href="#">Q. what is your personal color?</a></span></div>
+                        <div><span><a href="#">Q. what is your favorite color?</a></span></div>
                     </div>
-                    <!--
-                    학생용 객관식 퀴즈
-                    <div class="container">
-                      <div class="info">
-                        <span id="num">문제 번호</span>
-                        <span id="name">문제명</span>
-                        <span id="lecturer">작성자</span>
-                      </div>
-                      <div class="content">
-                        <form method="get" action="">
-                          <div class="choicebox">
-                            <p>Color</p>
-                            <label><input type="radio" name="color" value="blue" checked> Blue</label><br>
-                            <label><input type="radio" name="color" value="red"> Red</label>
-                            <p><input type="submit" value="Submit"> <input type="reset" value="Reset"></p>
-                          </div>
-                          <div>
-                          <이전 다음>
-                          </div>
-                        </form>
-                      </div>
-                    -->
                 </div>
                 <div id="tab4" class="cont">
-                    <div class="header">
-                        <input type="text" placeholder="질문을 입력하세요."></input>
+                    <div class="essay_view">
+                        <div class="view_header">
+                            <span>Q. 작성된 질문입니다. </span>
+                        </div><hr>
+                        <div class="view_body">
+                            <div class="canvas">
+                                <div class="chart-area">
+                                    <div id="innerChart" style="width:100%; height:280px;"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <span>A. <input type="text" placeholder="생각을 나눠보세요."></span>
+                                <button>입력</button>
+                            </div>
+                        </div>
                     </div>
-
-                    <!--
-                    <div class="header"> <h1>내가 좋아하는 과일은 ????</h1></div>
-                    <div class="chart-area">
-                       <div id="container"></div>
-                    </div>
-                  </body>
-                  <script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script>
-                  <script src="https://cdn.anychart.com/releases/v8/js/anychart-tag-cloud.min.js"></script>
-                  <script>
-                    anychart.onDocumentReady(function () {
-                      var count = Math.random() * 100;
-                      var data = [
-                          {
-                              "x": "사과", "value": 15, category: "red"
-                          },{
-                              "x": "바나나", "value": 12, category: "yellow"
-                          },{
-                              "x": "수박", "value": 10, category: "blue"
-                          },{
-                              "x": "참외", "value": 5, category: "yellow"
-                          },{
-                              "x": "자몽", "value": 3, category: "orange"
-                          },{
-                              "x": "다조아", "value": 2, category: "black"
-                          }
-                      ];
-                      var chart = anychart.tagCloud(data);
-                      chart.angles([0]);
-                      chart.container("container");
-                      // chart.getCredits().setEnabled(false);
-                      chart.draw();
-                    });
-                  </script>-->
                 </div>
             </div>
         </div>
@@ -206,33 +204,11 @@
         </footer>
     </body>
 </html>
-<link rel="stylesheet" href="css/index.css">
-<link href="https://hangeul.pstatic.net/hangeul_static/css/NanumJangMiCe.css" rel="stylesheet">
+<script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script>
+<script src="https://cdn.anychart.com/releases/v8/js/anychart-tag-cloud.min.js"></script>
 <script src="js/jquery.js"></script>
 <script src="js/isotope.pkgd.min.js"></script>
 <script src="js/common.js"></script>
-<script>
-    const tabList = document.querySelectorAll('.tab_menu .list li');
-    const contents = document.querySelectorAll('.tab_menu .cont_area .cont')
-    let activeCont = ' '; // 현재 활성화 된 컨텐츠 (기본:#tab1 활성화)
-
-    for(var i = 0; i < tabList.length; i++){
-        tabList[i].querySelector('.btn').addEventListener('click', function(e){
-            e.preventDefault();
-            for(var j = 0; j < tabList.length; j++){
-                // 나머지 버튼 클래스 제거
-                tabList[j].classList.remove('is_on');
-
-                // 나머지 컨텐츠 display:none 처리
-                contents[j].style.display = 'none';
-            }
-
-            // 버튼 관련 이벤트
-            this.parentNode.classList.add('is_on');
-
-            // 버튼 클릭시 컨텐츠 전환
-            activeCont = this.getAttribute('href');
-            document.querySelector(activeCont).style.display = 'block';
-        });
-    }
-</script>
+<script src="js/index.js"></script>
+<link rel="stylesheet" href="css/index.css">
+<link href="https://hangeul.pstatic.net/hangeul_static/css/NanumJangMiCe.css" rel="stylesheet">

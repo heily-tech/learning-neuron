@@ -61,3 +61,42 @@ for(var i = 0; i < tabList.length; i++){
         document.querySelector(activeCont).style.display = 'block';
     });
 }
+
+
+
+    anychart.onDocumentReady(function () {
+    var data = [
+{
+    "x": "IT",
+    "value": 59,
+    category: "Sino-Tibetan"
+},
+{
+    "x": "Python",
+    "value": 283,
+    category: "Indo-European"
+},
+{
+    "x": "소프트웨어",
+    "value": 544,
+    category: "Indo-European"
+},
+{
+    "x": "JAVA",
+    "value": 527,
+    category: "Indo-European"
+}, {
+    "x": "C++",
+    "value": 422,
+    category: "Afro-Asiatic"
+}, {
+    "x": "HTML",
+    "value": 62,
+    category: "Afro-Asiatic"
+}
+    ];
+    var chart = anychart.tagCloud(data);
+    chart.angles([0]);
+    chart.container("innerChart");
+    chart.draw();
+});
